@@ -1,4 +1,5 @@
 
+
 // object = A collection of related properties and/or methods can 
 //          represent real world objects (people, products, places)
 //          object = {key:value,
@@ -41,7 +42,7 @@
 //  person2.sayHello();
 //  person2.eat()
  
-//========================================================================
+//==================================================================
 
 
 
@@ -63,44 +64,83 @@
 // console.log(this);
 
 
-//======================================================================
+//==================================================================
 
 // constructor = special method for defining the
 //               properties and method of objects
 
 
-function car(make, model, year, color){
-    this.make = make,
-    this.model = model,
-    this.year = year,
-    this.color = color,
-    this.drive = function(){console.log(`You drive the ${this.model}`)}
+// function car(make, model, year, color){
+//     this.make = make,
+//     this.model = model,
+//     this.year = year,
+//     this.color = color,
+//     this.drive = function(){console.log(`You drive the ${this.model}`)}
+// }
+
+// const car1 = new car("foed", "mustang", 2024, "red");
+// const car2 = new car("chevrolet", "camaro", 2025, "blue")
+// const car3= new car("dodge", "charger", 2026, "silver")
+
+// console.log(car1.make);
+// console.log(car1.model);
+// console.log(car2.year);
+// console.log(car1.color);
+
+// console.log(car2.make);
+// console.log(car2.model);
+// console.log(car2.year);
+// console.log(car2.color);
+
+// console.log(car3.make);
+// console.log(car3.model);
+// console.log(car3.year);
+// console.log(car3.color);
+
+// car1.drive()
+// car2.drive()
+// car3.drive()
+
+//==================================================================
+
+// class = (ES6 feature) provides a more structured and cleaner way to
+//          work with objects compared to tradiyinal constructor function
+//          ex. static keywords, ancapsulation, inheritance
+
+
+class products{
+    constructor(name, price){
+        this.name = name;
+        this.price = price;
+    }
+    displayProduct(){
+        console.log(`product: ${this.name}`);
+        console.log(`product: $${this.price.toFixed(2)}`);
+        
+    }
+
+    calculateTotal(salesTax){
+        return this.price + (this.price * salesTax)
+    }
 }
 
-const car1 = new car("foed", "mustang", 2024, "red");
-const car2 = new car("chevrolet", "camaro", 2025, "blue")
-const car3= new car("dodge", "charger", 2026, "silver")
+const salesTax = 0.05
+
+const product1 = new products("shirt", 19.99)
+const product2 = new products("pants", 22.50)
+const product3 = new products("underwere", 100.00)
+
+product1.displayProduct()
+product2.displayProduct()
+product3.displayProduct()
+
+const total = product1.calculateTotal(salesTax);
+
+console.log(`Total price for product one is $${total.toFixed(2)}`);
 
 
-console.log(car1.make);
-console.log(car1.model);
-console.log(car2.year);
-console.log(car1.color);
-
-console.log(car2.make);
-console.log(car2.model);
-console.log(car2.year);
-console.log(car2.color);
-
-console.log(car3.make);
-console.log(car3.model);
-console.log(car3.year);
-console.log(car3.color);
 
 
-car1.drive()
-car2.drive()
-car3.drive()
 
 
 
