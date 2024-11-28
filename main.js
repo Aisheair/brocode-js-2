@@ -168,33 +168,93 @@
 // console.log(mathUtil.getArea(10));
 
 
-class user{
-    static userCount = 0;
+// class user{
+//     static userCount = 0;
 
-    constructor(username){
-        this.username = username
-        user.userCount++
-    }
-    static getUserCount(){
+//     constructor(username){
+//         this.username = username
+//         user.userCount++
+//     }
+//     static getUserCount(){
+        
+//     }
+//     sayHello(){
+//         console.log(`Hello, my userame is ${this.username}`);
+        
+//     }
+// }
+
+// const user1 = new user("Ankit")
+// const user2 = new user("Dass")
+// const user3 = new user("shreya")
+
+// console.log(user1.username);
+// console.log(user2.username);
+// console.log(user3.username);
+// // console.log(user1.userCount); as it doesnt have usercount as a property
+// console.log(user.userCount);
+
+// user1.sayHello()
+
+//======================================================================
+
+//  inheritance = allows a new class to inherit properties and methods
+//                from an existing class (parent -> child)
+//                helps with code reusability
+
+class Animal{
+    alive = true
+
+    eat(){
+        console.log(`this${this.name} is eating`);
         
     }
-    sayHello(){
-        console.log(`Hello, my userame is ${this.username}`);
+    sleep(){
+        console.log(`this${this.name} is sleeping`);
         
     }
 }
 
-const user1 = new user("Ankit")
-const user2 = new user("Dass")
-const user3 = new user("shreya")
+class rabbit extends Animal{
+    name = "rabbit"
+}
 
-console.log(user1.username);
-console.log(user2.username);
-console.log(user3.username);
-// console.log(user1.userCount); as it doesnt have usercount as a property
-console.log(user.userCount);
+class fish extends Animal{
+    name = "fish"
+}
 
-user1.sayHello()
+class hawk extends Animal{
+    name = "hawk"
+}
+
+const Rabbit = new rabbit()
+const Fish = new fish()
+const Hawk = new hawk()
+
+
+
+console.log(Rabbit.alive);
+Rabbit.eat()
+Rabbit.sleep()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
