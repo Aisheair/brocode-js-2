@@ -108,35 +108,98 @@
 //          ex. static keywords, ancapsulation, inheritance
 
 
-class products{
-    constructor(name, price){
-        this.name = name;
-        this.price = price;
+// class products{
+//     constructor(name, price){
+//         this.name = name;
+//         this.price = price;
+//     }
+//     displayProduct(){
+//         console.log(`product: ${this.name}`);
+//         console.log(`product: $${this.price.toFixed(2)}`);
+        
+//     }
+
+//     calculateTotal(salesTax){
+//         return this.price + (this.price * salesTax)
+//     }
+// }
+
+// const salesTax = 0.05
+
+// const product1 = new products("shirt", 19.99)
+// const product2 = new products("pants", 22.50)
+// const product3 = new products("underwere", 100.00)
+
+// product1.displayProduct()
+// product2.displayProduct()
+// product3.displayProduct()
+
+// const total = product1.calculateTotal(salesTax);
+
+// console.log(`Total price for product one is $${total.toFixed(2)}`);
+
+//========================================================================
+
+
+
+// Static = keyword that defins properties or method that belong
+//          to a class itself rather than the objects created
+//          from that class (class owns anything static, not the objects)
+
+
+// class mathUtil{
+//     static PI = 3.14159
+
+//     static getDiameter(radius){
+//         return radius * 2
+//     }
+
+//     static getcircumference(radius){
+//         return 2 * this.PI * radius;
+//     }
+//     static getArea(radius){
+//         return this.PI * radius * radius
+//     }
+// }
+
+// console.log(mathUtil.PI);
+// console.log(mathUtil.getDiameter(10));
+// console.log(mathUtil.getcircumference(10));
+// console.log(mathUtil.getArea(10));
+
+
+class user{
+    static userCount = 0;
+
+    constructor(username){
+        this.username = username
+        user.userCount++
     }
-    displayProduct(){
-        console.log(`product: ${this.name}`);
-        console.log(`product: $${this.price.toFixed(2)}`);
+    static getUserCount(){
         
     }
-
-    calculateTotal(salesTax){
-        return this.price + (this.price * salesTax)
+    sayHello(){
+        console.log(`Hello, my userame is ${this.username}`);
+        
     }
 }
 
-const salesTax = 0.05
+const user1 = new user("Ankit")
+const user2 = new user("Dass")
+const user3 = new user("shreya")
 
-const product1 = new products("shirt", 19.99)
-const product2 = new products("pants", 22.50)
-const product3 = new products("underwere", 100.00)
+console.log(user1.username);
+console.log(user2.username);
+console.log(user3.username);
+// console.log(user1.userCount); as it doesnt have usercount as a property
+console.log(user.userCount);
 
-product1.displayProduct()
-product2.displayProduct()
-product3.displayProduct()
+user1.sayHello()
 
-const total = product1.calculateTotal(salesTax);
 
-console.log(`Total price for product one is $${total.toFixed(2)}`);
+
+
+
 
 
 
