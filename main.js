@@ -245,57 +245,106 @@
 //         this = this object
 //         super = the parent
 
-class Animal{
-    constructor(name, age){
-        this.name = name;
-        this.age = age;
-    }
-    move(speed){
-        console.log(`The ${this.name} moves at a speed of ${speed}mph`);
+// class Animal{
+//     constructor(name, age){
+//         this.name = name;
+//         this.age = age;
+//     }
+//     move(speed){
+//         console.log(`The ${this.name} moves at a speed of ${speed}mph`);
         
+//     }
+// }
+
+// class Rabbit extends Animal{
+//     constructor(name, age, runSpeed){
+//         super(name, age);
+//         this.runSpeed = runSpeed;
+//     }
+//     run(){
+//         console.log(`this ${this.name} can run`);
+//         super.move(this.runSpeed)
+//     }
+// }
+
+// class Fish extends Animal{
+//     constructor(name, age, swimSpeed){
+//         super(name, age);
+//         this.swimSpeed = swimSpeed;
+//     }
+//     swim(){
+//         console.log(`this ${this.name} can swim`);
+//         super.move(this.swimSpeed)
+//     }
+// }
+
+// class Hawk extends Animal{
+//     constructor(name, age, flySpeed){
+//         super(name, age);
+//         this.flySpeed = flySpeed;
+//     }
+//     fly(){
+//         console.log(`this ${this.name} can fly`);
+//         super.move(this.flySpeed)
+//     }
+// }
+
+
+// const rabbit = new Rabbit("Rabbitboi", 1, 25);
+// const fish = new Fish("Fishboi", 2, 12);
+// const hawk = new Hawk("Hawkboi", 3, 50);
+
+// rabbit.run()
+// rabbit.move
+//======================================================================
+
+// getter = special method that makes a property redable
+// setter = special method that makes a oroperty writeable
+
+// validate and modify a value when reading/writting a property
+
+
+class Rectangle{
+    constructor(width, height){
+        this.width = width
+        this.height = height
+    }
+    set width(newWidth){
+        if(newWidth > 0){
+            this._width = newWidth
+        }
+        else{
+            console.error("width must be a possative number");
+        }
+    }
+    set height(newHeight){
+        if(newHeight > 0){
+            this._height = newHeight
+        }
+        else{
+            console.error("height must be a possative number");
+        }
+    }
+    get width(){
+        return this._width;
+    }
+    get height(){
+        return this._height;
     }
 }
 
-class Rabbit extends Animal{
-    constructor(name, age, runSpeed){
-        super(name, age);
-        this.runSpeed = runSpeed;
-    }
-    run(){
-        console.log(`this ${this.name} can run`);
-        super.move(this.runSpeed)
-    }
-}
-
-class Fish extends Animal{
-    constructor(name, age, swimSpeed){
-        super(name, age);
-        this.swimSpeed = swimSpeed;
-    }
-    swim(){
-        console.log(`this ${this.name} can swim`);
-        super.move(this.swimSpeed)
-    }
-}
-
-class Hawk extends Animal{
-    constructor(name, age, flySpeed){
-        super(name, age);
-        this.flySpeed = flySpeed;
-    }
-    fly(){
-        console.log(`this ${this.name} can fly`);
-        super.move(this.flySpeed)
-    }
-}
+const rectangle = new Rectangle(3, 4)
 
 
-const rabbit = new Rabbit("Rabbitboi", 1, 25);
-const fish = new Fish("Fishboi", 2, 12);
-const hawk = new Hawk("Hawkboi", 3, 50);
+rectangle.width = 5;
+rectangle.height = 6;
 
-rabbit.run()
-rabbit.move
+
+console.log(rectangle.width);
+console.log(rectangle.height);
+
+
+
 
 
 
