@@ -304,44 +304,115 @@
 // validate and modify a value when reading/writting a property
 
 
-class Rectangle{
-    constructor(width, height){
-        this.width = width
-        this.height = height
+// class Rectangle{
+//     constructor(width, height){
+//         this.width = width
+//         this.height = height
+//     }
+//     set width(newWidth){
+//         if(newWidth > 0){
+//             this._width = newWidth
+//         }
+//         else{
+//             console.error("width must be a possative number");
+//         }
+//     }
+//     set height(newHeight){
+//         if(newHeight > 0){
+//             this._height = newHeight
+//         }
+//         else{
+//             console.error("height must be a possative number");
+//         }
+//     }
+//     get width(){
+//         return this._width;
+//     }
+//     get height(){
+//         return this._height;
+//     }
+// }
+
+// const rectangle = new Rectangle(3, 4)
+
+
+// rectangle.width = 5;
+// rectangle.height = 6;
+
+
+// console.log(rectangle.width);
+// console.log(rectangle.height);
+
+
+
+class Person{
+    constructor(firstName, lastName, age){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
     }
-    set width(newWidth){
-        if(newWidth > 0){
-            this._width = newWidth
+    set firstName(newFirstName){
+        if(typeof newFirstName === "string" && newFirstName.length > 0){
+            this._firstName = newFirstName
         }
         else{
-            console.error("width must be a possative number");
+            console.log("First namer should be non epmty");
+            
         }
     }
-    set height(newHeight){
-        if(newHeight > 0){
-            this._height = newHeight
+    set lastName(newlastName){
+        if(typeof newlastName === "string" && newlastName.length > 0 ){
+            this._lastname = newlastName
         }
         else{
-            console.error("height must be a possative number");
+            console.log("last namer should be non epmty");
+            
         }
     }
-    get width(){
-        return this._width;
+    set age(newAge){
+        if(typeof newAge === "number" && newAge >= 0){
+            this._age = newAge
+        }
+        else{
+            console.log("put a valid age");
+            
+        }
     }
-    get height(){
-        return this._height;
+    get firstName(){
+        return this._firstName
+    }
+    get lastName(){
+        return this._lastname
+    }
+    get age(){
+        return this._age
+    }
+    get fullName(){
+        return this._firstName + " " + this._lastname
     }
 }
 
-const rectangle = new Rectangle(3, 4)
+const person = new Person("hamiu", "harami", 66);
+
+console.log(person.firstName);
+console.log(person.lastName);
+console.log(person.fullName);
+console.log(person.age);
 
 
-rectangle.width = 5;
-rectangle.height = 6;
 
 
-console.log(rectangle.width);
-console.log(rectangle.height);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
