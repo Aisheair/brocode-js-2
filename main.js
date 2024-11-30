@@ -345,73 +345,156 @@
 
 
 
-class Person{
-    constructor(firstName, lastName, age){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-    }
-    set firstName(newFirstName){
-        if(typeof newFirstName === "string" && newFirstName.length > 0){
-            this._firstName = newFirstName
-        }
-        else{
-            console.log("First namer should be non epmty");
+// class Person{
+//     constructor(firstName, lastName, age){
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.age = age;
+//     }
+//     set firstName(newFirstName){
+//         if(typeof newFirstName === "string" && newFirstName.length > 0){
+//             this._firstName = newFirstName
+//         }
+//         else{
+//             console.log("First namer should be non epmty");
             
-        }
-    }
-    set lastName(newlastName){
-        if(typeof newlastName === "string" && newlastName.length > 0 ){
-            this._lastname = newlastName
-        }
-        else{
-            console.log("last namer should be non epmty");
+//         }
+//     }
+//     set lastName(newlastName){
+//         if(typeof newlastName === "string" && newlastName.length > 0 ){
+//             this._lastname = newlastName
+//         }
+//         else{
+//             console.log("last namer should be non epmty");
             
-        }
-    }
-    set age(newAge){
-        if(typeof newAge === "number" && newAge >= 0){
-            this._age = newAge
-        }
-        else{
-            console.log("put a valid age");
+//         }
+//     }
+//     set age(newAge){
+//         if(typeof newAge === "number" && newAge >= 0){
+//             this._age = newAge
+//         }
+//         else{
+//             console.log("put a valid age");
             
-        }
-    }
-    get firstName(){
-        return this._firstName
-    }
-    get lastName(){
-        return this._lastname
-    }
-    get age(){
-        return this._age
-    }
-    get fullName(){
-        return this._firstName + " " + this._lastname
-    }
+//         }
+//     }
+//     get firstName(){
+//         return this._firstName
+//     }
+//     get lastName(){
+//         return this._lastname
+//     }
+//     get age(){
+//         return this._age
+//     }
+//     get fullName(){
+//         return this._firstName + " " + this._lastname
+//     }
+// }
+
+// const person = new Person("hamiu", "harami", 66);
+
+// console.log(person.firstName);
+// console.log(person.lastName);
+// console.log(person.fullName);
+// console.log(person.age);
+
+//====================================================================
+
+
+// destructuring = extract values from array and object
+//                 then assign them to variables in a convenient way
+//                 [] = to perform array destruring
+//                 {} = to perform object destruring
+//                 5 exampls
+
+// ------------- Example 1 -----------
+// SWAP THE VALUE OF TWO VARIABLES
+
+let a = 1;
+let b = 2;
+
+[a, b] = [b, a];
+
+console.log(a);
+console.log(b);
+
+
+// ------------- Example 2 -----------
+// SWAP 2 ELEMENTS IN AN ARRAY 
+
+const colors = ["red", "green", "blue", "black", "white"];
+
+[colors[0], colors[4]] = [colors[4], colors[0]]
+
+console.log(colors);
+
+
+// ------------- Example 3 -----------
+// ASSIGN ARRAY ELEMENTS TO VARIABLES
+
+const Colors = ["red", "green", "blue", "black", "white"];
+
+const [firstColour, SecondColour, thirdColour, ...extraColor] = Colors;
+
+
+console.log(firstColour);
+console.log(SecondColour);
+console.log(thirdColour);
+console.log(extraColor);
+
+
+
+// ------------- Example 4 -----------
+// EXTRACT VALUES FROM OBJECTS
+
+const person1 = {
+    firstName: "Ankit",
+    lastName: "Kargupta",
+    age:"19",
+    job: "chilling",
 }
 
-const person = new Person("hamiu", "harami", 66);
+const person2 = {
+    firstName: "shreya",
+    lastName: "dass",
+    age:"19",
+}
 
-console.log(person.firstName);
-console.log(person.lastName);
-console.log(person.fullName);
-console.log(person.age);
+const {firstName, lastName, age, job="unemployed"} = person2
 
-
-
-
-
-
-
-
+console.log(firstName);
+console.log(lastName);
+console.log(age);
+console.log(job);
 
 
+// ----------------- EXAMPLE 5 ---------------------
+// DESTRUCTURE IN FUNCTION PARAMETERS
+
+function displayPerson({firstName, lastName, age, job="unemployed"}){
+    console.log(`name: ${firstName} ${lastName}`);
+    console.log(`age: ${age}`);
+    console.log(`job: ${job}`);
+    
+}
 
 
+const person_1 = {
+    firstName: "Ankit",
+    lastName: "Kargupta",
+    age:"18",
+    job: "chilling",
+}
+
+const person_2 = {
+    firstName: "shreya",
+    lastName: "dass",
+    age:"18",
+}
 
 
+displayPerson(person_1)
 
 
 
