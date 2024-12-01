@@ -534,38 +534,97 @@
     
 // }
 
-class person{
-    constructor(name, age, ...address){
-        this.name = name
-        this.age = age
-        this.address = new Address(...address)
-    }
-}
+// class person{
+//     constructor(name, age, ...address){
+//         this.name = name
+//         this.age = age
+//         this.address = new Address(...address)
+//     }
+// }
 
 
 
 
-class Address{
-    constructor(street, city, country){
-        this.street = street
-        this.city = city
-        this.country = country
-    }
-}
+// class Address{
+//     constructor(street, city, country){
+//         this.street = street
+//         this.city = city
+//         this.country = country
+//     }
+// }
 
-const person1 = new person("Spongebob", 30, "124 Cont St.", 
-                                            "Bikini Bottom",
-                                            "Int watter")
+// const person1 = new person("Spongebob", 30, "124 Cont St.", 
+//                                             "Bikini Bottom",
+//                                             "Int watter")
 
-const person2 = new person("Patrick", 37, "128 Cont St.", 
-                                            "Bikini Bottom", 
-                                            "Int watter")
+// const person2 = new person("Patrick", 37, "128 Cont St.", 
+//                                             "Bikini Bottom", 
+//                                             "Int watter")
 
-const person3 = new person("Squidward", 45, "126 Cont St.", 
-                                            "Bikini Bottom", 
-                                            "Int watter")
+// const person3 = new person("Squidward", 45, "126 Cont St.", 
+//                                             "Bikini Bottom", 
+//                                             "Int watter")
 
-console.log(person1.address.country);
+// console.log(person1.address.country);
+
+// ====================================================================
+
+// ---------------- ARRAYS OF OBJECT --------------------------
+
+const fruits = [{name: "Apple", color: "red", calories: 95}, 
+                {name: "Orange", color: "orange", calories: 45}, 
+                {name: "Banana", color: "yellow", calories: 105}, 
+                {name: "Coconut", color: "white", calories: 159}, 
+                {name: "Pineapple", color: "yellow", calories: 37}];
+
+
+// --------------- foeEach() ---------------
+
+
+fruits.forEach(fruit => console.log(fruit.color))
+
+
+// ------------------------- map() ------------------------
+
+const fruitsName = fruits.map(fruit => fruit.name)
+const fruitsColor = fruits.map(fruit => fruit.color)
+const fruitsCalories = fruits.map(fruit => fruit.calories)
+
+console.log(fruitsName);
+console.log(fruitsColor);
+console.log(fruitsCalories);
+
+
+
+// ------------------------ FILTER() ------------------------
+
+const yellowFruits = fruits.filter(fruit => fruit.color === "yellow")
+const lowCAlFruits = fruits.filter(fruits => fruits.calories < 100)
+const highCAlFruits = fruits.filter(fruits => fruits.calories >= 100)
+
+console.log(yellowFruits);
+console.log(lowCAlFruits);
+console.log(highCAlFruits);
+
+
+// ---------------------- reduce () ----------------------------
+
+const maxFruit = fruits.reduce( (max, fruit) => 
+                                fruit.calories > max.calories ?
+                                fruit : max)
+const minFruit = fruits.reduce( (min, fruit) => 
+                                fruit.calories < min.calories ?
+                                fruit : min)
+
+console.log(maxFruit);
+console.log(minFruit);
+
+
+
+
+
+
+
 
 
 
