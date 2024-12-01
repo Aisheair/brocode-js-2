@@ -569,62 +569,80 @@
 
 // ====================================================================
 
-// ---------------- ARRAYS OF OBJECT --------------------------
+// // ---------------- ARRAYS OF OBJECT --------------------------
 
-const fruits = [{name: "Apple", color: "red", calories: 95}, 
-                {name: "Orange", color: "orange", calories: 45}, 
-                {name: "Banana", color: "yellow", calories: 105}, 
-                {name: "Coconut", color: "white", calories: 159}, 
-                {name: "Pineapple", color: "yellow", calories: 37}];
-
-
-// --------------- foeEach() ---------------
+// const fruits = [{name: "Apple", color: "red", calories: 95}, 
+//                 {name: "Orange", color: "orange", calories: 45}, 
+//                 {name: "Banana", color: "yellow", calories: 105}, 
+//                 {name: "Coconut", color: "white", calories: 159}, 
+//                 {name: "Pineapple", color: "yellow", calories: 37}];
 
 
-fruits.forEach(fruit => console.log(fruit.color))
+// // --------------- foeEach() ---------------
 
 
-// ------------------------- map() ------------------------
-
-const fruitsName = fruits.map(fruit => fruit.name)
-const fruitsColor = fruits.map(fruit => fruit.color)
-const fruitsCalories = fruits.map(fruit => fruit.calories)
-
-console.log(fruitsName);
-console.log(fruitsColor);
-console.log(fruitsCalories);
+// fruits.forEach(fruit => console.log(fruit.color))
 
 
+// // ------------------------- map() ------------------------
 
-// ------------------------ FILTER() ------------------------
+// const fruitsName = fruits.map(fruit => fruit.name)
+// const fruitsColor = fruits.map(fruit => fruit.color)
+// const fruitsCalories = fruits.map(fruit => fruit.calories)
 
-const yellowFruits = fruits.filter(fruit => fruit.color === "yellow")
-const lowCAlFruits = fruits.filter(fruits => fruits.calories < 100)
-const highCAlFruits = fruits.filter(fruits => fruits.calories >= 100)
-
-console.log(yellowFruits);
-console.log(lowCAlFruits);
-console.log(highCAlFruits);
-
-
-// ---------------------- reduce () ----------------------------
-
-const maxFruit = fruits.reduce( (max, fruit) => 
-                                fruit.calories > max.calories ?
-                                fruit : max)
-const minFruit = fruits.reduce( (min, fruit) => 
-                                fruit.calories < min.calories ?
-                                fruit : min)
-
-console.log(maxFruit);
-console.log(minFruit);
+// console.log(fruitsName);
+// console.log(fruitsColor);
+// console.log(fruitsCalories);
 
 
+
+// // ------------------------ FILTER() ------------------------
+
+// const yellowFruits = fruits.filter(fruit => fruit.color === "yellow")
+// const lowCAlFruits = fruits.filter(fruits => fruits.calories < 100)
+// const highCAlFruits = fruits.filter(fruits => fruits.calories >= 100)
+
+// console.log(yellowFruits);
+// console.log(lowCAlFruits);
+// console.log(highCAlFruits);
+
+
+// // ---------------------- reduce () ----------------------------
+
+// const maxFruit = fruits.reduce( (max, fruit) => 
+//                                 fruit.calories > max.calories ?
+//                                 fruit : max)
+// const minFruit = fruits.reduce( (min, fruit) => 
+//                                 fruit.calories < min.calories ?
+//                                 fruit : min)
+
+// console.log(maxFruit);
+// console.log(minFruit);
 
 
 
 
+// sort() = method used to short element of an array in place.
+//   Sort elementas as strings in lexicographic order, not alphabetical
+//   lexicograpic = {alphabet + numbers + symbols} as strings
 
+// let numbers = [2, 4, 6, 1, 6, 10, 9, 8, 3, 7, 5]
+
+
+// numbers.sort((a, b) => a - b);
+
+// console.log(numbers);
+
+const people = [{name: "Spongebob", age: 30, gpa: 3.0}, 
+                {name: "Patrick", age: 37, gpa: 1.5}, 
+                {name: "Squodward", age: 51, gpa: 2.5}, 
+                {name: "Sandy", age: 25, gpa: 4.0}]
+
+// people.sort((a, b) => a.age - b.age)
+ people.sort((a, b) => a.name.localeCompare(b.name))
+
+
+console.log(people);
 
 
 
