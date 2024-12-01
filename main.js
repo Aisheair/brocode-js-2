@@ -411,97 +411,161 @@
 // ------------- Example 1 -----------
 // SWAP THE VALUE OF TWO VARIABLES
 
-let a = 1;
-let b = 2;
+// let a = 1;
+// let b = 2;
 
-[a, b] = [b, a];
+// [a, b] = [b, a];
 
-console.log(a);
-console.log(b);
-
-
-// ------------- Example 2 -----------
-// SWAP 2 ELEMENTS IN AN ARRAY 
-
-const colors = ["red", "green", "blue", "black", "white"];
-
-[colors[0], colors[4]] = [colors[4], colors[0]]
-
-console.log(colors);
+// console.log(a);
+// console.log(b);
 
 
-// ------------- Example 3 -----------
-// ASSIGN ARRAY ELEMENTS TO VARIABLES
+// // ------------- Example 2 -----------
+// // SWAP 2 ELEMENTS IN AN ARRAY 
 
-const Colors = ["red", "green", "blue", "black", "white"];
+// const colors = ["red", "green", "blue", "black", "white"];
 
-const [firstColour, SecondColour, thirdColour, ...extraColor] = Colors;
+// [colors[0], colors[4]] = [colors[4], colors[0]]
 
-
-console.log(firstColour);
-console.log(SecondColour);
-console.log(thirdColour);
-console.log(extraColor);
+// console.log(colors);
 
 
+// // ------------- Example 3 -----------
+// // ASSIGN ARRAY ELEMENTS TO VARIABLES
 
-// ------------- Example 4 -----------
-// EXTRACT VALUES FROM OBJECTS
+// const Colors = ["red", "green", "blue", "black", "white"];
 
-const person1 = {
-    firstName: "Ankit",
-    lastName: "Kargupta",
-    age:"19",
-    job: "chilling",
-}
-
-const person2 = {
-    firstName: "shreya",
-    lastName: "dass",
-    age:"19",
-}
-
-const {firstName, lastName, age, job="unemployed"} = person2
-
-console.log(firstName);
-console.log(lastName);
-console.log(age);
-console.log(job);
+// const [firstColour, SecondColour, thirdColour, ...extraColor] = Colors;
 
 
-// ----------------- EXAMPLE 5 ---------------------
-// DESTRUCTURE IN FUNCTION PARAMETERS
+// console.log(firstColour);
+// console.log(SecondColour);
+// console.log(thirdColour);
+// console.log(extraColor);
 
-function displayPerson({firstName, lastName, age, job="unemployed"}){
-    console.log(`name: ${firstName} ${lastName}`);
-    console.log(`age: ${age}`);
-    console.log(`job: ${job}`);
+
+
+// // ------------- Example 4 -----------
+// // EXTRACT VALUES FROM OBJECTS
+
+// const person1 = {
+//     firstName: "Ankit",
+//     lastName: "Kargupta",
+//     age:"19",
+//     job: "chilling",
+// }
+
+// const person2 = {
+//     firstName: "shreya",
+//     lastName: "dass",
+//     age:"19",
+// }
+
+// const {firstName, lastName, age, job="unemployed"} = person2
+
+// console.log(firstName);
+// console.log(lastName);
+// console.log(age);
+// console.log(job);
+
+
+// // ----------------- EXAMPLE 5 ---------------------
+// // DESTRUCTURE IN FUNCTION PARAMETERS
+
+// function displayPerson({firstName, lastName, age, job="unemployed"}){
+//     console.log(`name: ${firstName} ${lastName}`);
+//     console.log(`age: ${age}`);
+//     console.log(`job: ${job}`);
     
+// }
+
+
+// const person_1 = {
+//     firstName: "Ankit",
+//     lastName: "Kargupta",
+//     age:"18",
+//     job: "chilling",
+// }
+
+// const person_2 = {
+//     firstName: "shreya",
+//     lastName: "dass",
+//     age:"18",
+// }
+
+
+// displayPerson(person_1)
+
+
+
+
+
+
+//=====================================================================
+
+// nesting objects = Objects inside of other objecys.
+//                   Allow you to represent more complex data structure
+//                   Child Object is enclosed by a parent Object
+
+//                   Person{Address{}, ContactInfo{}}
+//                   ShoppingCart(Keyboard(), Mouse{}, Monitor{})
+
+
+// const person = {
+//     fullName: "Ankit kargupta",
+//     age: 30,
+//     isStudent: true,
+//     hobbies: ["cute", "chilling", "gaming"],
+//     address: {
+//         street: "124 Conch St.",
+//         city: "Bikini Bottom",
+//         country: "Int. Water"
+//     }
+// }
+
+// // console.log(person.fullName);
+// // console.log(person.age);
+// // console.log(person.isStudent);
+// // console.log(person.hobbies[2]);
+// // console.log(person.address.city);
+
+// for(const property in person.address){
+//     console.log(person.address[property]);
+    
+// }
+
+class person{
+    constructor(name, age, ...address){
+        this.name = name
+        this.age = age
+        this.address = new Address(...address)
+    }
 }
 
 
-const person_1 = {
-    firstName: "Ankit",
-    lastName: "Kargupta",
-    age:"18",
-    job: "chilling",
+
+
+class Address{
+    constructor(street, city, country){
+        this.street = street
+        this.city = city
+        this.country = country
+    }
 }
 
-const person_2 = {
-    firstName: "shreya",
-    lastName: "dass",
-    age:"18",
-}
+const person1 = new person("Spongebob", 30, "124 Cont St.", 
+                                            "Bikini Bottom",
+                                            "Int watter")
 
+const person2 = new person("Patrick", 37, "128 Cont St.", 
+                                            "Bikini Bottom", 
+                                            "Int watter")
 
-displayPerson(person_1)
+const person3 = new person("Squidward", 45, "126 Cont St.", 
+                                            "Bikini Bottom", 
+                                            "Int watter")
 
-
-
-
-
-
-
+console.log(person1.address.country);
 
 
 
