@@ -685,42 +685,79 @@
 
 
 
-function outer(){
+// function outer(){
 
-    let message = "Hello";
+//     let message = "Hello";
 
-    function inner(){
-        console.log(message);
+//     function inner(){
+//         console.log(message);
         
-    }
+//     }
 
-    inner();
+//     inner();
+// }
+
+
+
+// outer()
+
+
+// function creatCounter(){
+
+//     let count = 0;
+
+//     function increment(){
+//         count++
+//         console.log(`Count increase to ${count}`);
+        
+//     }
+//     return {increment}
+// }
+
+// const counter = creatCounter();
+
+// counter.increment()
+// counter.increment()
+// counter.increment()
+
+//=====================================================================
+
+// setTimeOut = Function in javaScript that allows you to schedule 
+//              the execution of a fuction after an amout of time
+//         time are approximate(varies based on the workload of the
+//                               javascript runtime env)
+
+//          setTimeout(callback, delay);
+
+
+// function sayHello(){
+//     window.alert("Hello");
+// }
+
+
+// setTimeout(sayHello, 3000)
+
+// const timeout = setTimeout(() => window.alert("hello"), 3000)
+
+// clearTimeout(timeout)
+
+
+//--------------------button---------------------------
+
+let timeoutid;
+
+
+function startTimer(){
+    timeoutid = setTimeout(() => window.alert("hello"), 3000)
+    console.log("STARTED");
+    
 }
 
-
-
-outer()
-
-
-function creatCounter(){
-
-    let count = 0;
-
-    function increment(){
-        count++
-        console.log(`Count increase to ${count}`);
-        
-    }
-    return {increment}
+function clearTimer(){
+    clearTimeout(timeoutid)
+    console.log("CLEAR");
+    
 }
-
-const counter = creatCounter();
-
-counter.increment()
-counter.increment()
-counter.increment()
-
-
 
 
 
