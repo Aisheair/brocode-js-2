@@ -631,18 +631,55 @@
 
 // numbers.sort((a, b) => a - b);
 
-// console.log(numbers);
+// // console.log(numbers);
 
-const people = [{name: "Spongebob", age: 30, gpa: 3.0}, 
-                {name: "Patrick", age: 37, gpa: 1.5}, 
-                {name: "Squodward", age: 51, gpa: 2.5}, 
-                {name: "Sandy", age: 25, gpa: 4.0}]
+// const people = [{name: "Spongebob", age: 30, gpa: 3.0}, 
+//                 {name: "Patrick", age: 37, gpa: 1.5}, 
+//                 {name: "Squodward", age: 51, gpa: 2.5}, 
+//                 {name: "Sandy", age: 25, gpa: 4.0}]
 
-// people.sort((a, b) => a.age - b.age)
- people.sort((a, b) => a.name.localeCompare(b.name))
+// // people.sort((a, b) => a.age - b.age)
+//  people.sort((a, b) => a.name.localeCompare(b.name))
 
 
-console.log(people);
+// console.log(people);
+
+
+//=====================================================================
+
+//Date Objects= Objects that contain values that represent datas & time
+//              These date objects can be changed and formatted
+
+const date = new Date(); 
+// Date(year , month, day, hour, minite, second, ms)
+
+// const year = date.getFullYear()
+// const month = date.getMonth()
+// const day = date.getDate()
+
+
+
+
+
+// console.log(year);
+// console.log(month);
+// console.log(day);
+
+const date1 = new Date("2023-12-31")
+const date2 = new Date("2023-01-1")
+
+if(date2 > date1){
+    console.log("Happy New Year");
+    
+}
+
+
+
+
+
+
+
+
 
 
 
