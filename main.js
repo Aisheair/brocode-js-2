@@ -647,43 +647,78 @@
 
 //=====================================================================
 
-//Date Objects= Objects that contain values that represent datas & time
-//              These date objects can be changed and formatted
+// //Date Objects= Objects that contain values that represent datas & time
+// //              These date objects can be changed and formatted
 
-const date = new Date(); 
-// Date(year , month, day, hour, minite, second, ms)
+// const date = new Date(); 
+// // Date(year , month, day, hour, minite, second, ms)
 
-// const year = date.getFullYear()
-// const month = date.getMonth()
-// const day = date.getDate()
-
-
+// // const year = date.getFullYear()
+// // const month = date.getMonth()
+// // const day = date.getDate()
 
 
 
-// console.log(year);
-// console.log(month);
-// console.log(day);
 
-const date1 = new Date("2023-12-31")
-const date2 = new Date("2023-01-1")
 
-if(date2 > date1){
-    console.log("Happy New Year");
+// // console.log(year);
+// // console.log(month);
+// // console.log(day);
+
+// const date1 = new Date("2023-12-31")
+// const date2 = new Date("2023-01-1")
+
+// if(date2 > date1){
+//     console.log("Happy New Year");
     
+// }
+
+
+//=====================================================================
+
+// Closure = A function defined inside of another function,
+//           the inner function has access to the variables
+//           and scop of the outer function.
+//           Allow for private variables and state maintenance
+//           Used frequently in JS frameworks: React, Vue, Angular
+
+
+
+
+function outer(){
+
+    let message = "Hello";
+
+    function inner(){
+        console.log(message);
+        
+    }
+
+    inner();
 }
 
 
 
+outer()
 
 
+function creatCounter(){
 
+    let count = 0;
 
+    function increment(){
+        count++
+        console.log(`Count increase to ${count}`);
+        
+    }
+    return {increment}
+}
 
+const counter = creatCounter();
 
-
-
-
+counter.increment()
+counter.increment()
+counter.increment()
 
 
 
