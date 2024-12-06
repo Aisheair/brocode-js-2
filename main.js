@@ -785,7 +785,30 @@
 
 
 
+//====================================================================
 
+
+
+// synchronous = Executes line by line consecutively in a sequential manner
+//               Code that waits for an operation to complete.
+
+// asynchoronous = Allows multiple operations to be performed concurrently without waiting
+//                 Dosen't block the execution flow and allows the program to continue 
+//                 (I/O operation, network requests, fetching date)
+//                  Handled with: Callbacks, Promises, Async/Await
+
+function funk1(callback){
+    setTimeout(() => {console.log("Task 1")
+                        callback()}, 3000)
+}
+
+function funk2(){
+    console.log("Task 2");
+    console.log("Task 3");
+    console.log("Task 4");
+}
+
+funk1(funk2)
 
 
 
