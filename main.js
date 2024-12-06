@@ -744,20 +744,59 @@
 
 //--------------------button---------------------------
 
-let timeoutid;
+// let timeoutid;
 
 
-function startTimer(){
-    timeoutid = setTimeout(() => window.alert("hello"), 3000)
-    console.log("STARTED");
+// function startTimer(){
+//     timeoutid = setTimeout(() => window.alert("hello"), 3000)
+//     console.log("STARTED");
     
-}
+// }
 
-function clearTimer(){
-    clearTimeout(timeoutid)
-    console.log("CLEAR");
+// function clearTimer(){
+//     clearTimeout(timeoutid)
+//     console.log("CLEAR");
     
-}
+// }
+
+//====================================================================
+
+// ES6 Module = An external file that contains reusable code
+//              that can be imported into other Javescript files.
+//              Write resusable code for many different apps
+//              Can contain variables, class, functions ... and more 
+//              Introduced as part of ECMAScript 2015 update
+
+import {PI, getCircumference, getArea, getVolume} from './mathUtil.js';
+
+
+console.log(PI);
+
+const cir = getCircumference(10)
+const area = getArea(10)
+const vol = getVolume(10)
+
+console.log(cir.toFixed(2));
+console.log(area.toFixed(2));
+console.log(vol.toFixed(2));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
