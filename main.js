@@ -797,18 +797,76 @@
 //                 (I/O operation, network requests, fetching date)
 //                  Handled with: Callbacks, Promises, Async/Await
 
-function funk1(callback){
-    setTimeout(() => {console.log("Task 1")
-                        callback()}, 3000)
+// function funk1(callback){
+//     setTimeout(() => {console.log("Task 1")
+//                         callback()}, 3000)
+// }
+
+// function funk2(){
+//     console.log("Task 2");
+//     console.log("Task 3");
+//     console.log("Task 4");
+// }
+
+// funk1(funk2)
+
+//====================================================================
+
+// Error = An Object that is created to represent a problem that occurs
+//        Occur often with user input or establishing a connection 
+
+// try { } = Encloses code that might potentially cause an error 
+// catch { } = Catch snd handle any thrown Error from try { }
+// finally { } = {optional} Always executes, used mostly for clean up
+//               ex. close files, close connection, release resources  
+
+try{
+    console.log("HELLO");
+    // NETWORK ERROR
+    // PROMISE REJECTION
+    // SECURITY ERRORS
 }
 
-function funk2(){
-    console.log("Task 2");
-    console.log("Task 3");
-    console.log("Task 4");
+catch(error){
+    console.error(error);
+    
+}
+finally{
+    // CLOSE FILES
+    // CLOSE CONNECTIONS
+    // RELEASE RESOURCES
+    console.log("THIS AWLAYS EXECUTE");
+    
+}
+console.log("You reach the end");
+
+
+
+try{
+    const dividend = Number(window.prompt("Enter a dividend:  "))
+    const divisor = Number(window.prompt("Enter a divisor:  "))
+    if(divisor == 0){
+        throw new Error("you cant")
+    }
+    if(isNaN(dividend) || isNaN(dividend)){
+        console.error("choose number");
+    }
+    const result = dividend / divisor
+    console.log(result);
 }
 
-funk1(funk2)
+catch(error){
+    console.error(error);
+    
+}
+console.log("end");
+
+
+
+
+
+
+
 
 
 
