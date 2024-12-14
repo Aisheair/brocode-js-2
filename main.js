@@ -874,15 +874,76 @@
 //       JavaScript can access the DOM to dynamically
 //       Change the content, structure, and style of a web page.
 
-const username = " "
-const welcomeMsg = document.getElementById("welcome-msg")
+// const username = " "
+// const welcomeMsg = document.getElementById("welcome-msg")
 
-welcomeMsg.textContent += username === "" ? `Guest` : username
+// welcomeMsg.textContent += username === "" ? `Guest` : username
 
 
 //=========================================================================
 
+// Element selectors = Methods used to taget and manipulate HTML element
+//                   They allow you to select one or multiple HTML element 
+//                   from the DOM (DOCUMENT OBJECT MODEL) 
 
+//  1. document.getElementById()             // ELEMENT OR NULL
+//  2. document.getElementsByClassName()     // HTML COLLECTION 
+//  3. document.getElementsByTagName         // HTML COLLECTION
+//  4. document.querySelector()              // ELEMENT OR NULL
+//  5. document.querySelectorAll()           // NODELIST
+
+const myHedding = document.getElementById("my-headingg");
+myHedding.style.backgroundColor = "yellow";
+myHedding.style.textAlign = "center";
+
+console.log(myHedding);
+
+const Fruits = document.getElementsByClassName("fruits")
+
+for(let fruit of Fruits){
+    fruit.style.backgroundColor = "yellow"
+}
+
+Array.from(Fruits).forEach(Fruits => {
+    Fruits.style.backgroundColor = "yelow"
+})
+
+const h4Elements = document.getElementsByTagName("h4")
+const liElements = document.getElementsByTagName("li")
+
+console.log(h4Elements);
+
+h4Elements[0].style.backgroundColor = "yellow"
+
+
+for(let h4Element of h4Elements){
+    h4Element.style.backgroundColor = "yellow"
+}
+for(let liElement of liElements){
+    liElement.style.backgroundColor = "green"
+}
+
+Array.from(h4Elements).forEach(h4Elements => {
+    h4Elements.style.backgroundColor = "Yellow"
+})
+
+Array.from(liElements).forEach(liElements => {
+    liElements.style.backgroundColor = "lightblue"
+})
+
+const element = document.querySelector("ol");
+element.style.backgroundColor = "yellow"
+console.log(element);
+
+
+const li = document.querySelectorAll("li")
+
+li[].style.backgroundColor = "yellow"
+
+
+li.forEach(food =>{
+    food.style.backgroundColor = "yellow"
+} )
 
 
 
