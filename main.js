@@ -818,64 +818,69 @@
 // try { } = Encloses code that might potentially cause an error 
 // catch { } = Catch snd handle any thrown Error from try { }
 // finally { } = {optional} Always executes, used mostly for clean up
-//               ex. close files, close connection, release resources  
+// //               ex. close files, close connection, release resources  
 
-try{
-    console.log("HELLO");
-    // NETWORK ERROR
-    // PROMISE REJECTION
-    // SECURITY ERRORS
-}
+// try{
+//     console.log("HELLO");
+//     // NETWORK ERROR
+//     // PROMISE REJECTION
+//     // SECURITY ERRORS
+// }
 
-catch(error){
-    console.error(error);
+// catch(error){
+//     console.error(error);
     
-}
-finally{
-    // CLOSE FILES
-    // CLOSE CONNECTIONS
-    // RELEASE RESOURCES
-    console.log("THIS AWLAYS EXECUTE");
+// }
+// finally{
+//     // CLOSE FILES
+//     // CLOSE CONNECTIONS
+//     // RELEASE RESOURCES
+//     console.log("THIS AWLAYS EXECUTE");
     
-}
-console.log("You reach the end");
+// }
+// console.log("You reach the end");
 
 
 
-try{
-    const dividend = Number(window.prompt("Enter a dividend:  "))
-    const divisor = Number(window.prompt("Enter a divisor:  "))
-    if(divisor == 0){
-        throw new Error("you cant")
-    }
-    if(isNaN(dividend) || isNaN(dividend)){
-        console.error("choose number");
-    }
-    const result = dividend / divisor
-    console.log(result);
-}
+// try{
+//     const dividend = Number(window.prompt("Enter a dividend:  "))
+//     const divisor = Number(window.prompt("Enter a divisor:  "))
+//     if(divisor == 0){
+//         throw new Error("you cant")
+//     }
+//     if(isNaN(dividend) || isNaN(dividend)){
+//         console.error("choose number");
+//     }
+//     const result = dividend / divisor
+//     console.log(result);
+// }
 
-catch(error){
-    console.error(error);
+// catch(error){
+//     console.error(error);
     
-}
-console.log("end");
+// }
+// console.log("end");
 
 
 
+//=======================================================================
 
 
+// DOM = DOCUMENT OBJECT MODEL
+//       Object() that represents the peg you see in the web browser
+//       and provides you with an API to interact with it
+//       web beowser constructs the DOM when it loads an HTML document,
+//       and structures all the element in a tree-like representation.
+//       JavaScript can access the DOM to dynamically
+//       Change the content, structure, and style of a web page.
+
+const username = " "
+const welcomeMsg = document.getElementById("welcome-msg")
+
+welcomeMsg.textContent += username === "" ? `Guest` : username
 
 
-
-
-
-
-
-
-
-
-
+//=========================================================================
 
 
 
