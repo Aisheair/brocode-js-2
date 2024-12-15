@@ -892,58 +892,135 @@
 //  4. document.querySelector()              // ELEMENT OR NULL
 //  5. document.querySelectorAll()           // NODELIST
 
-const myHedding = document.getElementById("my-headingg");
-myHedding.style.backgroundColor = "yellow";
-myHedding.style.textAlign = "center";
+// const myHedding = document.getElementById("my-headingg");
+// myHedding.style.backgroundColor = "yellow";
+// myHedding.style.textAlign = "center";
 
-console.log(myHedding);
+// console.log(myHedding);
 
-const Fruits = document.getElementsByClassName("fruits")
+// const Fruits = document.getElementsByClassName("fruits")
 
-for(let fruit of Fruits){
-    fruit.style.backgroundColor = "yellow"
-}
+// for(let fruit of Fruits){
+//     fruit.style.backgroundColor = "yellow"
+// }
 
-Array.from(Fruits).forEach(Fruits => {
-    Fruits.style.backgroundColor = "yelow"
-})
+// Array.from(Fruits).forEach(Fruits => {
+//     Fruits.style.backgroundColor = "yelow"
+// })
 
-const h4Elements = document.getElementsByTagName("h4")
-const liElements = document.getElementsByTagName("li")
+// const h4Elements = document.getElementsByTagName("h4")
+// const liElements = document.getElementsByTagName("li")
 
-console.log(h4Elements);
+// console.log(h4Elements);
 
-h4Elements[0].style.backgroundColor = "yellow"
-
-
-for(let h4Element of h4Elements){
-    h4Element.style.backgroundColor = "yellow"
-}
-for(let liElement of liElements){
-    liElement.style.backgroundColor = "green"
-}
-
-Array.from(h4Elements).forEach(h4Elements => {
-    h4Elements.style.backgroundColor = "Yellow"
-})
-
-Array.from(liElements).forEach(liElements => {
-    liElements.style.backgroundColor = "lightblue"
-})
-
-const element = document.querySelector("ol");
-element.style.backgroundColor = "yellow"
-console.log(element);
+// h4Elements[0].style.backgroundColor = "yellow"
 
 
-const li = document.querySelectorAll("li")
+// for(let h4Element of h4Elements){
+//     h4Element.style.backgroundColor = "yellow"
+// }
+// for(let liElement of liElements){
+//     liElement.style.backgroundColor = "green"
+// }
 
-li[].style.backgroundColor = "yellow"
+// Array.from(h4Elements).forEach(h4Elements => {
+//     h4Elements.style.backgroundColor = "Yellow"
+// })
+
+// Array.from(liElements).forEach(liElements => {
+//     liElements.style.backgroundColor = "lightblue"
+// })
+
+// const element = document.querySelector("ol");
+// element.style.backgroundColor = "yellow"
+// console.log(element);
 
 
-li.forEach(food =>{
-    food.style.backgroundColor = "yellow"
-} )
+// const li = document.querySelectorAll("li")
+
+// li[].style.backgroundColor = "yellow"
+
+
+// li.forEach(food =>{
+//     food.style.backgroundColor = "yellow"
+// } )
+
+//=========================================================================
+
+// DOM Navigation = The process of navigating through the structure
+//                  of an HTML document using javascript
+
+// .firstElementChild
+// .lastElementChild
+// .nextElementrSibling
+// .previousElementSibling
+// .partentElement
+// .childern
+
+//--------------------------- firstElementChild -----------------------
+
+// const element = document.getElementById("vegetables");
+// const firstChild = element.firstElementChild
+// firstChild.style.backgroundColor = ""
+
+// const ULelements = document.querySelectorAll("ul")
+
+// ULelements.forEach(ulElements => {
+//     const firstChild1 = ulElements.firstElementChild;
+//     firstChild1.style.backgroundColor = "yellow"
+// })
+
+//--------------------------- lastElementChild -----------------------
+
+// const element = document.getElementById("fruits")
+// const lastchild = element.lastElementChild
+// lastchild.style.backgroundColor = "yellow"
+
+// const ulElements = document.querySelectorAll("ul")
+
+// ulElements.forEach(ulElement => {
+//     const lastchild = ulElement.lastElementChild
+//     lastchild.style.backgroundColor = "yellow"
+// })
+
+
+//--------------------------- lastElementChild -----------------------
+
+// const elemet = document.getElementById("fruits")
+// const nextsibling = elemet.nextElementSibling
+// nextsibling.style.backgroundColor = "yellow"
+
+
+//------------------------ previousElementSibling -------------------
+
+// const  element = document.getElementById("vegetables")
+// const pervsibling = element.previousElementSibling
+// pervsibling.style.backgroundColor = "yellow"
+
+//--------------------------- partentElement -----------------------
+
+//  const element = document.getElementById("pie")
+// const parent = element.parentElement
+// parent.style.backgroundColor = "yellow"
+
+
+//------------------------- childern -------------------------
+
+//  const element = document.getElementById("fruits")
+// const childern = element.children
+
+// // Array.from(childern).forEach(child => {
+// //     child.style.backgroundColor = "yellow"
+// // })
+
+// childern[1].style.backgroundColor = "yellow"
+
+
+
+
+
+
+
 
 
 
